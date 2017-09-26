@@ -17,6 +17,6 @@ int main() {
 	cout << "enter the number";
 	cin >> num;
 	cout << "the numbers are \n";
-	cout << printn(num);
+	printn(num);
 	return 0;
 }
