@@ -9,20 +9,22 @@ int digits(int num){
 	}
 	return sum;
 }
-int reverse(int num, int count){
-	int temp;
+int reverse(int num){
+	int count = digits(num);
+	int temp =0;
 	if(num >0){
 	temp = num %10;
-	return temp + reverse(num/10, count -1)*pow(10,count);
+	count--;
+	return (temp*pow(10,count) + reverse(num/10));
 	
 	}else
+	
 	return 0;
 }
 int main() {
 	int num;
 	cout <<"enter your number\n";
 	cin>> num;
-	int count = digits(num);
-	cout <<reverse(num,count);
+	cout <<reverse(num);
 	return 0;
 }
